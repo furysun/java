@@ -1,5 +1,6 @@
 package com.company.start;
 
+// everything is ok
 public class LoopDemo {
     public static void main(String[] args) {
 
