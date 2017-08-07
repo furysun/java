@@ -1,4 +1,4 @@
-package com.company.start;
+package com.company.start.loopAndCondition;
 
 // everything is ok
 public class LoopDemo {
