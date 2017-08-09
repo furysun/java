@@ -1,7 +1,7 @@
 package com.company.start.collection;
 
 
-public class Customers {
+public class Customer {
     private String name;
     private int SumOfOrder;
 
@@ -23,7 +23,7 @@ public class Customers {
 
     @Override
     public String toString() {
-        return "Customers{" +
+        return "Customer{" +
                 "name='" + name + '\'' +
                 ", SumOfOrder=" + SumOfOrder +
                 '}';

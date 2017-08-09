@@ -6,7 +6,7 @@ public class DemoShop {
     public static void main(String[] args) {
         LinkedList<String> productName = new LinkedList<>();
 
-        Customers costomer = new Customers();
+        Customer costomer = new Customer();
 
         costomer.setName("Tom");
         productName.add("Bra");
