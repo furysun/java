@@ -1,8 +1,9 @@
 package com.company.start.inheritance;
 
-/**
- * Created by yana on 8/7/17.
- */
 class Parent{
+    public int a;
 
+    public Parent(int a){
+        this.a = a;
+    }
 }
