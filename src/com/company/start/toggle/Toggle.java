@@ -1,6 +1,6 @@
-package com.company.start.switch1;
+package com.company.start.toggle;
 
-public class Switch1 {
+public class Toggle {
     public static void main(String[] args) {
         String s = "d";
 
