@@ -1,6 +1,5 @@
 package com.company.start.collection.arrayList;
 
-
 import java.util.ArrayList;
 
 public class DemoArrayList {

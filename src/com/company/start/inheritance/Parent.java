@@ -1,9 +1,17 @@
 package com.company.start.inheritance;
 
-class Parent{
-    public int a;
+class Parent {
+    private int a;
 
-    public Parent(int a){
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    Parent(int a) {
         this.a = a;
     }
 }

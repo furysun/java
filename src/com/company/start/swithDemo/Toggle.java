@@ -1,4 +1,4 @@
-package com.company.start.toggle;
+package com.company.start.swithDemo;
 
 public class Toggle {
     public static void main(String[] args) {

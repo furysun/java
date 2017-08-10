@@ -1,5 +1,7 @@
 package com.company.start.interfaceDemo;
 
-interface Edible {
+interface Alive {
     void eat();
+    void move();
+    void speak();
 }
