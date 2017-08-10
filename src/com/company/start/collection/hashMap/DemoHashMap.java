@@ -10,12 +10,15 @@ public class DemoHashMap {
         customer.put("Tom",1);
         customer.put("Rom",2);
         customer.put("Uom",3);
+
+        customer.clear();
+
         customer.put("Lom",4);
         customer.put("Gom",5);
 
         System.out.println(customer);
 
-        customer.get(1);
-        System.out.println(customer);
+        System.out.println(customer.get("Lom"));
+        System.out.println(customer.get("Tom"));
     }
 }
