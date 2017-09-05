@@ -3,7 +3,105 @@ package com.company.codingCat;
 public class StringTwo {
 
     public static void main(String[] args) {
-        String s = "afghkkrukg";
+        String s = "aaafggjfgjhbjрор";
+        System.out.println(s.substring(0, 3).equals(s.substring(s.length() - 3)));
+    }
+
+
+    public String startWord2(String str, String word) {
+        if(word.length()>str.length()){
+            return "";
+        }
+
+        if(str.length()>1 && word.length()>1 && str.charAt(1) != word.charAt(1)
+                ||
+                str.length()>2 && word.length()>2 && str.charAt(2) != word.charAt(2)){
+            return "";
+        }
+        return str.substring(0, word.length());
+    }
+
+
+    public String withoutX2345(String str) {
+        if (str.length() <= 1) {
+            return "";
+        }
+        if (str.substring(0, 2).equals("xx")) {
+            return str.substring(2);
+        }
+        if (str.charAt(0) == 'x') {
+            return str.substring(1);
+        }
+        if (str.charAt(1) == 'x') {
+            return str.substring(0, 1) + str.substring(2);
+        }
+        return str;
+    }
+
+    public String withoutX234(String str) {
+        if (str.length() <= 1 || str.equals("")) {
+            return "";
+        }
+        if (str.charAt(0) == 'x' && str.substring(str.length() - 1).equals("x")) {
+            return str.substring(1, str.length() - 1);
+        }
+        if (str.charAt(0) == 'x') {
+            return str.substring(1);
+        }
+        if (str.substring(str.length() - 1).equals("x")) {
+            return str.substring(0, str.length() - 1);
+        }
+        return str;
+    }
+
+    public String startWord(String str, String word) {
+        if (str.length() < 1 || word.length() < 1) {
+            return "";
+        }
+        if (str.length() > 1) {
+
+            if (str.length() < 3) {
+                return str.substring(str.length() - 1);
+            }
+            if (str.substring(1).equals(word.substring(1))) {
+                return str.substring(0);
+            }
+            if (str.substring(1, 3).equals(word.substring(1, 3))) {
+                return str.substring(0, 3);
+            }
+        }
+        return "";
+    }
+
+    public String deFront(String str) {
+        if (str.charAt(0) == 'a' && str.charAt(1) != 'b') {
+            return "a" + str.substring(2);
+        }
+        if (str.charAt(0) == 'a' && str.charAt(1) == 'b') {
+            return str;
+        }
+        if (str.charAt(1) == 'b') {
+            return str.substring(1);
+        }
+        return str.substring(2);
+    }
+
+    public String without2(String str) {
+        if (str.length() < 2 || str.equals("")) {
+            return str;
+        }
+        if (str.substring(0, 2).equals(str.substring(str.length() - 2))) {
+            return str.substring(2);
+        }
+        return str;
+    }
+
+    public String extraFront(String str) {
+        String threeS = str + str + str;
+        if (str.length() < 2) {
+            return threeS;
+        }
+        return str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
 
     }
 
@@ -16,12 +114,12 @@ public class StringTwo {
         if (b.equals("")) {
             return b;
         }
-        if (a.length() < b.length()) {
-            return a + b.substring(b.length() - amin);
+        if (amin < bmin) {
+            return a + b.substring(bmin - amin);
         }
 
-        if (b.length() < a.length()) {
-            return b + a.substring(a.length() - bmin);
+        if (bmin < amin) {
+            return b + a.substring(amin - bmin);
         }
         return a;
     }
@@ -123,8 +221,6 @@ public class StringTwo {
     }
 
     public String withoutX1(String str) {
-
-
         if (str.length() > 3) {
 
             if (str.charAt(0) == 'x' && str.charAt(str.length() - 1) == 'x') {
@@ -170,7 +266,6 @@ public class StringTwo {
 
         }
         return str;
-
 
     }
 
@@ -261,7 +356,7 @@ public class StringTwo {
         }
         return str;
     }
-    
+
 }
 
 
