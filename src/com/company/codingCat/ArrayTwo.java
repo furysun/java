@@ -2,7 +2,38 @@ package com.company.codingCat;
 
 public class ArrayTwo {
     public static void main(String[] args) {
+        print1(fizzArray(5));
+    }
 
+
+    public boolean only14(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 1 && nums[i] != 4) {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+    public static void print(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
+
+    public static void print1(int[] array) {
+        for (int elem : array) {
+            System.out.println(elem + " ");
+        }
+    }
+
+    public static int[] fizzArray(int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i;
+        }
+        return array;
     }
 
     public boolean lucky13(int[] nums) {
@@ -128,7 +159,7 @@ public class ArrayTwo {
         }
         return sum;
     }
-    
+
     public static int countEvens(int[] nums) {
         int counter = 0;
         for (int num : nums) {
