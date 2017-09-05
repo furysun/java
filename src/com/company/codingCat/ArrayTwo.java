@@ -5,13 +5,28 @@ public class ArrayTwo {
         print1(fizzArray(5));
     }
 
+    public boolean no14(int[] nums) {
+
+        boolean containsOne = false;
+        boolean containsFour = false;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                containsOne = true;
+            }
+            if (nums[i] == 4) {
+                containsFour = true;
+            }
+        }
+        return !containsFour || !containsOne;
+
+    }
 
     public boolean only14(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != 1 && nums[i] != 4) {
                 return false;
             }
-
         }
         return true;
     }
