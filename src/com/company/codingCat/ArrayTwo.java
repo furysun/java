@@ -5,8 +5,66 @@ public class ArrayTwo {
         print1(fizzArray(5));
     }
 
-    public boolean no14(int[] nums) {
 
+    public boolean has12(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                for (int j = i; j < nums.length; j++) {
+                    if (nums[j] == 2) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean has77(int[] nums) {
+        boolean containsSeven = false;
+        boolean containsSevenTwo = false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 7 && nums[i + 1] == 7) {
+                containsSeven = true;
+            }
+
+            if (i < nums.length - 2 && nums[i] == 7 && nums[i + 2] == 7) {
+                containsSevenTwo = true;
+
+            }
+        }
+        return containsSeven || containsSevenTwo;
+    }
+
+    public int matchUp(int[] nums1, int[] nums2) {
+        int count = 0;
+        for (int i = 0; i < nums1.length; i++) {
+            int a = Math.abs(nums1[i] - nums2[i]);
+            if (a == 1 || a == 2) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public boolean either24(int[] nums) {
+        boolean containsTwo = false;
+        boolean containsFour = false;
+
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 2 && nums[i + 1] == 2) {
+                containsTwo = true;
+            }
+            if (nums[i] == 4 && nums[i + 1] == 4) {
+                containsFour = true;
+            }
+            if (containsTwo && containsFour) {
+                return false;
+            }
+        }
+        return containsTwo || containsFour;
+    }
+
+    public boolean no14(int[] nums) {
         boolean containsOne = false;
         boolean containsFour = false;
 
