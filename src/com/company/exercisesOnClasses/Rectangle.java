@@ -1,15 +1,15 @@
 package com.company.exercisesOnClasses;
 
-public class SimplifiedRectangle {
+public class Rectangle {
     private float length;
     private float width;
 
-    public SimplifiedRectangle() {
+    public Rectangle() {
         length = 1.0f;
         width = 1.0f;
     }
 
-    public SimplifiedRectangle(float l, float w) {
+    public Rectangle(float l, float w) {
         length = l;
         width = w;
     }
@@ -40,7 +40,7 @@ public class SimplifiedRectangle {
 
     @Override
     public String toString() {
-        return "SimplifiedRectangle{" +
+        return "Rectangle{" +
                 "length=" + length +
                 ", width=" + width +
                 '}';

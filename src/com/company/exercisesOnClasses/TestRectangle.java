@@ -2,7 +2,7 @@ package com.company.exercisesOnClasses;
 
 public class TestRectangle {
     public static void main(String[] args) {
-        SimplifiedRectangle rectangle = new SimplifiedRectangle();
+        Rectangle rectangle = new Rectangle();
         rectangle.setLength(5);
         rectangle.setWidth(3);
 

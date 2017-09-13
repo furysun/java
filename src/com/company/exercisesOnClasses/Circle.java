@@ -2,21 +2,21 @@ package com.company.exercisesOnClasses;
 
 import static java.lang.Math.PI;
 
-public class SimplifiedCircle {
+public class Circle {
     private double radius;
     private String color;
 
-    public SimplifiedCircle() {
+    public Circle() {
         radius = 1.0;
         color = "red";
     }
 
-    public SimplifiedCircle(double r) {
+    public Circle(double r) {
         this.radius = r;
         color = "red";
     }
 
-    public SimplifiedCircle(double r, String c) {
+    public Circle(double r, String c) {
         radius = r;
         color = c;
     }
@@ -46,6 +46,6 @@ public class SimplifiedCircle {
     }
 
     public String toString() {
-        return "SimplifiedCircle[radius=" + radius + " color=" + color + "]";
+        return "Circle[radius=" + radius + " color=" + color + "]";
     }
 }
