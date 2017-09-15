@@ -1,10 +1,13 @@
-package com.company.exercisesOnClasses;
+package com.company.exercisesOnClasses.task1;
+
+import com.company.inheritance.task3.Shape;
 
 import static java.lang.Math.PI;
 
-public class Circle {
-    private double radius;
-    private String color;
+public class Circle extends Shape{
+    public double radius;
+    public String color;
+    private int side;
 
     public Circle() {
         radius = 1.0;
@@ -46,6 +49,14 @@ public class Circle {
     }
 
     public String toString() {
-        return "Circle[radius=" + radius + " color=" + color + "]";
+        return "Cylinder[radius=" + radius + " color=" + color + "]";
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    public int getSide() {
+        return side;
     }
 }

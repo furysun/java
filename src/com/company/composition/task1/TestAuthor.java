@@ -1,4 +1,7 @@
-package com.company.composition;
+package com.company.composition.task1;
+
+import com.company.composition.task1.Author;
+import com.company.composition.task1.Book;
 
 public class TestAuthor {
     public static void main(String[] args) {

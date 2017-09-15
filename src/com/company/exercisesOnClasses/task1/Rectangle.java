@@ -1,8 +1,11 @@
-package com.company.exercisesOnClasses;
+package com.company.exercisesOnClasses.task1;
 
-public class Rectangle {
+import com.company.inheritance.task3.Shape;
+
+public class Rectangle extends Shape {
     private float length;
     private float width;
+    private int side;
 
     public Rectangle() {
         length = 1.0f;
@@ -44,5 +47,13 @@ public class Rectangle {
                 "length=" + length +
                 ", width=" + width +
                 '}';
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    public int getSide() {
+        return side;
     }
 }

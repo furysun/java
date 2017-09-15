@@ -1,4 +1,6 @@
-package com.company.exercisesOnClasses;
+package com.company.exercisesOnClasses.task1;
+
+import com.company.exercisesOnClasses.task1.Circle;
 
 public class TestCircle {
     public static void main(String[] args) {

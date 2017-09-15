@@ -1,4 +1,4 @@
-package com.company.composition;
+package com.company.composition.task2;
 
 public class MyPoint {
     private int x = 0;

@@ -1,4 +1,4 @@
-package com.company.composition;
+package com.company.composition.task1;
 
 public class Author {
     private String name;

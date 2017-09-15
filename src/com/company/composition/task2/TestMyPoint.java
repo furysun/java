@@ -1,4 +1,4 @@
-package com.company.composition;
+package com.company.composition.task2;
 
 public class TestMyPoint {
     public static void main(String[] args) {
