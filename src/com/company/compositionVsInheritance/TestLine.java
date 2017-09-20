@@ -13,6 +13,7 @@ public class TestLine {
         Point p2 = new Point(6, 7);
         LineSub l = new LineSub(p1, p2);
         System.out.println(l);
+        System.out.println(l);
     }
 
 }
