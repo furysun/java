@@ -17,5 +17,12 @@ public class RedheadDuck extends Duck {
         System.out.println("Beautiful RedheadDuck: ");
         quack();
         swim();
+        fly();
+
+    }
+
+    @Override
+    void fly() {
+        System.out.println("I'm a lazy duck I do not fly");
     }
 }

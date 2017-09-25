@@ -17,5 +17,11 @@ public class MallardDuck extends Duck {
         System.out.println("MallardDuck: ");
         quack();
         swim();
+        fly();
+    }
+
+    @Override
+    void fly() {
+        System.out.println("fly");
     }
 }
