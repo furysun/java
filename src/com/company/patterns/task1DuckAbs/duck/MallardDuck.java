@@ -12,12 +12,12 @@ public class MallardDuck extends Duck {
 
     @Override
     public void swim() {
-        System.out.println("M");
+        System.out.println("I'm good swiming");
     }
 
     @Override
     public void display() {
-        System.out.println("Mlhj,");
+        System.out.println("Show: ");
         swim();
     }
 }
