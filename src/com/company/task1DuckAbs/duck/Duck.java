@@ -1,4 +1,7 @@
-package com.company.task1DackAbs;
+package com.company.task1DuckAbs.duck;
+
+import com.company.task1DuckAbs.behavior.FlyBehavior;
+import com.company.task1DuckAbs.behavior.QuackBehavior;
 
 public abstract class Duck {
     public FlyBehavior flyBehavior;

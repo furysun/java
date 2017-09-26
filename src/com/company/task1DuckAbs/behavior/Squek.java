@@ -1,4 +1,4 @@
-package com.company.task1DackAbs;
+package com.company.task1DuckAbs.behavior;
 
 public class Squek implements QuackBehavior {
 

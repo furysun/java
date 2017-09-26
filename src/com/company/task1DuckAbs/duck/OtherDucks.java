@@ -1,4 +1,4 @@
-package com.company.task1DackAbs;
+package com.company.task1DuckAbs.duck;
 
 public class OtherDucks extends Duck {
 
