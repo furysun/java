@@ -1,12 +1,29 @@
 package com.company.task1DackAbs;
 
 public abstract class Duck {
-    abstract void quack();
+    public FlyBehavior flyBehavior;
+    public QuackBehavior quackBehavior;
 
-    abstract void swim();
+    public Duck() {
 
-    abstract void display();
+    }
 
-    abstract void fly();
+//    public void setFlyBehavior(FlyBehavior fb){
+//        flyBehavior = fb;
+//    }
+
+//    public abstract void swim();
+public void swim(){
+    System.out.println("swimmm");
+}
+    public abstract void display();
+
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+
+    public void performFly() {
+        flyBehavior.fly();
+    }
 
 }

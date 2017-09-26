@@ -1,19 +1,18 @@
 package com.company.task1DackAbs;
 
-public class MallardDuck extends Duck {
+public class OtherDucks extends Duck {
 
-    public MallardDuck() {
-    }
+
+
 
     @Override
     public void swim() {
-        System.out.println("M");
-
+        System.out.println("O");
     }
 
     @Override
     public void display() {
-        System.out.println("Mlhj,");
+        System.out.println("O");
         swim();
     }
 
