@@ -5,8 +5,8 @@ import com.company.patterns.task1DuckAbs.behavior.Quack;
 
 public class ModelDuck extends Duck{
     public ModelDuck() {
-        flyBehavior = new FlyNoWay();
         quackBehavior = new Quack();
+        flyBehavior = new FlyNoWay();
     }
 
     @Override

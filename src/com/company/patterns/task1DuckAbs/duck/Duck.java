@@ -7,6 +7,10 @@ public abstract class Duck {
     public FlyBehavior flyBehavior;
     public QuackBehavior quackBehavior;
 
+    public FlyBehavior getFlyBehavior() {
+        return flyBehavior;
+    }
+
     public Duck() {
 
     }
