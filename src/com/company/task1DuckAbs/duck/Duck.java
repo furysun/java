@@ -15,10 +15,10 @@ public abstract class Duck {
 //        flyBehavior = fb;
 //    }
 
-//    public abstract void swim();
-public void swim(){
-    System.out.println("swimmm");
-}
+    public void swim() {
+        System.out.println("swimmm");
+    }
+
     public abstract void display();
 
     public void performQuack() {

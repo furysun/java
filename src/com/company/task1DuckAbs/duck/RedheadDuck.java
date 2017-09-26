@@ -1,9 +1,6 @@
 package com.company.task1DuckAbs.duck;
 
 public class RedheadDuck extends Duck {
-
-
-
     @Override
     public void swim() {
         System.out.println("r");
@@ -13,8 +10,5 @@ public class RedheadDuck extends Duck {
     public void display() {
         System.out.println("r");
         swim();
-
     }
-
-
 }
