@@ -18,7 +18,7 @@ class Human {
         }
         try {
             throw new Sneeze();
-        }catch (Annoyance a){
+        } catch (Annoyance a) {
             System.out.println("catch Annoyance");
         }
     }
