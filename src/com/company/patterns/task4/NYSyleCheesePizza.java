@@ -8,4 +8,9 @@ public class NYSyleCheesePizza extends Pizza {
 
         toppings.add("NY Pizza");
     }
+
+    @Override
+    public void prepare() {
+
+    }
 }

@@ -9,7 +9,12 @@ public class ChicagoStyleCheesePizza extends Pizza {
         toppings.add("S Mozzarella Ch");
     }
 
-    void cut(){
-        System.out.println("Cutting the pizza ChicagoSsePizza");
+    @Override
+    public void prepare() {
+        System.out.println("ChicagoStyleCheesePizza");
     }
+
+//    void cut(){
+//        System.out.println("Cutting the pizza ChicagoSsePizza");
+//    }
 }
