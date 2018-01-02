@@ -1,10 +1,11 @@
 package com.company.start.collection.arrayList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DemoArrayList {
     public static void main(String[] args) {
-        ArrayList<String> customers = new ArrayList<>();
+        List<String> customers = new ArrayList<>();
         customers.add("Tom");
         customers.add("To");
         customers.add("Roo");

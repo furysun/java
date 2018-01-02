@@ -1,4 +1,4 @@
-package com.company.start.collection.arrayWrapper;
+package com.company.start.collection.myCollection.arrayWrapper;
 
 
 public class ArrayDemo {
@@ -11,7 +11,7 @@ public class ArrayDemo {
         array.put(4,7);
 
         array.print();
-        System.out.println(array.lenght());
+        System.out.println(array.length());
     }
 }
 

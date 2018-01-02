@@ -1,4 +1,4 @@
-package com.company.start.collection.arrayWrapper;
+package com.company.start.collection.myCollection.arrayWrapper;
 
 
 public class Array {
@@ -26,7 +26,7 @@ public class Array {
         }
     }
 
-    public int lenght(){
+    public int length(){
         return array.length;
     }
 }
