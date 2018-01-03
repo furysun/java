@@ -1,21 +1,24 @@
 package com.company.start.collection.myCollection.list2;
 
-public class MyArryListTwo implements MyListTwo {
+import java.util.Iterator;
+
+public class MyArryListTwo<T> implements MyListTwo<T> {
     public static final int CAPACITY = 10;
-    private int[] array;
+    private T[] array;
     private int size;
+    private Iterator<T> iterator = new MyArryListTwoIterator<>();
 
     public MyArryListTwo() {
-        array = new int[10];
+        array = (T[]) new Object[CAPACITY];
     }
 
 
     @Override
-    public void add(int elem) {
-        if (array.length == size){
-            int[] newArray = new int[size+CAPACITY];
+    public void add(T elem) {
+        if (array.length == size) {
+            T[] newArray = (T[]) new Object[size + CAPACITY];
 
-            for (int i= 0;i<array.length;i++){
+            for (int i = 0; i < array.length; i++) {
                 newArray[i] = array[i];
             }
             array = newArray;
@@ -26,14 +29,14 @@ public class MyArryListTwo implements MyListTwo {
     }
 
     @Override
-    public void remove(int elem) {
-        int[] newArray = new int[array.length];
+    public void remove(T elem) {
+        T[] newArray = (T[]) new Object[array.length];
         int newArrayIndex = 0;
         for (int i = 0; i < array.length; i++, newArrayIndex++) {
-          if(array[i] == elem){
-              i++;
-          }
-          newArray[newArrayIndex] = array[i];
+            if (array[i] == elem) {
+                i++;
+            }
+            newArray[newArrayIndex] = array[i];
         }
         array = newArray;
         size--;
@@ -50,11 +53,31 @@ public class MyArryListTwo implements MyListTwo {
             System.out.print(array[i] + " ");
         }
     }
+
+    @Override
+    public Iterator<T> iterator() {
+        return iterator;
+    }
+
+    class MyArryListTwoIterator<V> implements Iterator<V> {
+        private int current;
+
+        @Override
+        public boolean hasNext() {
+            return current < size;
+        }
+
+        @Override
+        public V next() {
+            return (V) array[current++];
+        }
+    }
 }
 
-class D {
+class DemoTest {
     public static void main(String[] args) {
-        MyListTwo myListTwo = new MyArryListTwo();
+        MyListTwo<Integer> myListTwo = new MyArryListTwo<>();
+
         myListTwo.add(1);
         myListTwo.add(2);
         myListTwo.add(3);
@@ -63,6 +86,11 @@ class D {
         myListTwo.remove(2);
 
         myListTwo.print();
+
+        for (Integer elem : myListTwo) {
+            System.out.println(elem);
+        }
+
     }
 }
 

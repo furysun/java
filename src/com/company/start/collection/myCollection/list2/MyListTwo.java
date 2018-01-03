@@ -1,9 +1,9 @@
 package com.company.start.collection.myCollection.list2;
 
-public interface MyListTwo{
-    void add(int elem);
+public interface MyListTwo<T> extends Iterable<T> {
+    void add(T elem);
 
-    void remove(int elem);
+    void remove(T elem);
 
     int size();
 
