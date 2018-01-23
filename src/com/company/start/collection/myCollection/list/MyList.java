@@ -10,4 +10,6 @@ public interface MyList<T> extends Iterable<T>{
     void print();
 
     boolean contains(T element);
+
+    T get(int index);
 }

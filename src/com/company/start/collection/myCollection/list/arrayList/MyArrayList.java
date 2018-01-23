@@ -8,7 +8,6 @@ public class MyArrayList<T> implements MyList<T> {
     public static final int CAPACITY = 10;
     private T[] array;
     private int size;
-    private Iterator<T> iterator = new MyArrayListIterator<>();
 
     MyArrayList() {
         array = (T[]) new Object[CAPACITY];
@@ -69,8 +68,13 @@ public class MyArrayList<T> implements MyList<T> {
     }
 
     @Override
+    public T get(int index) {
+        return array[index];
+    }
+
+    @Override
     public Iterator<T> iterator() {
-        return iterator;
+        return new MyArrayListIterator<>();
     }
 
     class MyArrayListIterator<V> implements Iterator<V> {

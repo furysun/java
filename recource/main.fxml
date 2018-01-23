@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox spacing="10" fx:id="mainVBox"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="catsTable.controller.MainController">
+
+    <HBox spacing="10" styleClass="size">
+
+        <TextField text="Name" fx:id="nameTextField">
+        </TextField>
+        <TextField text="1" fx:id="weighTextField">
+        </TextField>
+
+        <ComboBox fx:id="colorComboBox">
+
+        </ComboBox>
+
+        <TextField text="1" fx:id="ageTextField">
+        </TextField>
+
+        <Button text="add" prefHeight="30" prefWidth="60" styleClass="bottom-left" fx:id="addButton"
+                onAction="#pressAdd"/>
+    </HBox>
+
+    <HBox spacing="20" styleClass="color_style">
+        <Text text="  Name  "/>
+        <Text text="Weigh  "/>
+        <Text text="Color  "/>
+        <Text text="Age  "/>
+    </HBox>
+
+    <VBox fx:id="catsVBox">
+    </VBox>
+
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+</VBox>
