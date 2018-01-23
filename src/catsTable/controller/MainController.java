@@ -6,6 +6,7 @@ import catsTable.model.service.CatService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -90,6 +91,7 @@ public class MainController {
             HBox catHBox = populateHBox(cat);
             catsVBox.getChildren().add(catHBox);
         }
+
     }
 
     private HBox populateHBox(Cat cat) {
@@ -109,12 +111,24 @@ public class MainController {
         Label catAgeLabel = new Label();
         catAgeLabel.setText(String.valueOf(cat.getAge()));
 
+        Button delButton = new Button();
+        delButton.setText("x");
+
+        delButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("ffgg");
+                catService.delete(cat.getId());
+                showCats();
+            }
+        });
+
         catHBox.getChildren().add(catNameLabel);
         catHBox.getChildren().add(catWeighLabel);
         catHBox.getChildren().add(catColorLabel);
         catHBox.getChildren().add(catAgeLabel);
+        catHBox.getChildren().add(delButton);
 
         return catHBox;
     }
-
 }

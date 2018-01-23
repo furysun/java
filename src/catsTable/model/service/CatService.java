@@ -28,4 +28,8 @@ public class CatService {
     public void createCat(Cat cat) {
         catDao.createCat(cat);
     }
+
+    public void delete(int id) {
+        catDao.delete(id);
+    }
 }

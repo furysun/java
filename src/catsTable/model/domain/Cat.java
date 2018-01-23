@@ -1,13 +1,17 @@
 package catsTable.model.domain;
 
 
+import catsTable.model.service.CatIdGenerator;
+
 public class Cat {
     private String name;
     private int weigh;
     private CatColor color;
     private int age;
+    private int id;
 
     public Cat() {
+        id = (int) CatIdGenerator.generateId();
     }
 
     public Cat(String name, int age) {
@@ -16,10 +20,20 @@ public class Cat {
     }
 
     public Cat(String name, int weigh, CatColor color, int age) {
+        this();
+
         this.name = name;
         this.weigh = weigh;
         this.color = color;
         this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -61,6 +75,7 @@ public class Cat {
                 ", weigh=" + weigh +
                 ", color=" + color +
                 ", age=" + age +
+                ", id=" + id +
                 '}';
     }
 }

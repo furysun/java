@@ -9,4 +9,6 @@ public interface CatDao {
 
     void createCat(Cat cat);
 
+    void delete(int id);
+
 }

@@ -10,12 +10,12 @@ public class ClassCatDao implements CatDao {
     private static ClassCatDao instance;
     private CatStorage catStorage;
 
-    private ClassCatDao(){
+    private ClassCatDao() {
         catStorage = CatStorage.getInstance();
     }
 
-    public static ClassCatDao getInstance(){
-        if(instance == null){
+    public static ClassCatDao getInstance() {
+        if (instance == null) {
             instance = new ClassCatDao();
         }
 
@@ -33,5 +33,13 @@ public class ClassCatDao implements CatDao {
         List<Cat> cats = catStorage.getCats();
         cats.add(cat);
 
+    }
+
+    @Override
+    public void delete(int id) {
+        Cat cat = catStorage.findCatById(id);
+
+        List<Cat> cats = catStorage.getCats();
+        cats.remove(cat);
     }
 }

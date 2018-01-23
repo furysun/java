@@ -19,13 +19,23 @@ public class CatStorage {
     }
 
     private CatStorage() {
-        cats = new ArrayList<Cat>();
+        cats = new ArrayList<>();
 
         cats.add(new Cat("Tom", 1, CatColor.RED, 1));
         cats.add(new Cat("Tim", 2, CatColor.BLACK, 2));
         cats.add(new Cat("Mia", 3, CatColor.STRIPED, 4));
         cats.add(new Cat("Rose", 2, CatColor.WHITE, 1));
         cats.add(new Cat("Pri", 4, CatColor.RED, 5));
+    }
+
+    public Cat findCatById(int id) {
+        for (Cat cat : cats) {
+            if (cat.getId() == id) {
+                return cat;
+            }
+        }
+
+        throw new CatNotFoundException();
     }
 
     public List<Cat> getCats() {
