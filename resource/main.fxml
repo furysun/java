@@ -9,27 +9,51 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 
+<?import javafx.scene.control.Label?>
 <VBox spacing="10" fx:id="mainVBox"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="catsTable.controller.MainController">
 
+    <Text>add cat:</Text>
     <HBox spacing="10" styleClass="size">
 
-        <TextField text="Name" fx:id="nameTextField">
+        <TextField text="Name" fx:id="addCatNameTextField">
         </TextField>
-        <TextField text="1" fx:id="weighTextField">
+        <TextField text="1" fx:id="addCatWeighTextField">
         </TextField>
 
-        <ComboBox fx:id="colorComboBox">
+        <ComboBox fx:id="addCatColorComboBox">
 
         </ComboBox>
 
-        <TextField text="1" fx:id="ageTextField">
+        <TextField text="1" fx:id="addCatAgeTextField">
         </TextField>
 
         <Button text="add" prefHeight="30" prefWidth="60" styleClass="bottom-left" fx:id="addButton"
                 onAction="#pressAdd"/>
     </HBox>
+    <VBox fx:id="editVBox">
+        <Text>edit cat:</Text>
+        <HBox spacing="10" styleClass="size">
+
+            <TextField text="Name" fx:id="editNameTextField">
+            </TextField>
+            <TextField text="1" fx:id="editWeighTextField">
+            </TextField>
+
+            <ComboBox fx:id="editColorComboBox">
+
+            </ComboBox>
+
+            <TextField text="1" fx:id="editAgeTextField">
+            </TextField>
+
+            <Button text="edit" prefHeight="30" prefWidth="60" styleClass="bottom-left" fx:id="editButton"
+            onAction="#pressEdit"/>
+
+            <Label fx:id="editIdLabel" text="000"> </Label>
+        </HBox>
+    </VBox>
 
     <HBox spacing="20" styleClass="color_style">
         <Text text="  Name  "/>
